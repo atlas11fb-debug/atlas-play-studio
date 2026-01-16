@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Atlas Play Studio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="manifest" href="manifest.json">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Atlas Play Studio">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="toolbar">
+    <button id="toolSelect">Select</button>
+    <button id="toolMove">Move</button>
+    <button id="toolDraw">Draw Route</button>
+    <button id="playAnim">▶ Play</button>
+    <button id="pauseAnim">⏸ Pause</button>
+    <button id="resetAnim">⟲ Reset</button>
+    <button onclick="savePlay()">💾 Save</button>
+    <button onclick="loadPlay()">📂 Load</button>
+    <button onclick="toggleVideo()">🎥 Video</button>
+    <input id="videoURL" placeholder="Video URL…" style="width:150px;">
+</div>
+
+<video id="video"></video>
+<canvas id="field"></canvas>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
+
+<script>
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js");
+}
+</script>
+
+</body>
+</html>
