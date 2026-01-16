@@ -1,0 +1,5 @@
+body { background:#111; color:white; font-family:Arial; margin:0; }
+#toolbar { display:flex; gap:10px; padding:10px; background:#222; }
+button { padding:6px 12px; background:#444; border:none; color:white; }
+#field { background:#0b3d0b; width:100vw; height:80vh; display:block; }
+#video { position:absolute; top:0; left:0; width:100%; opacity:0.6; display:none; }
